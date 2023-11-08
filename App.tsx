@@ -10,7 +10,7 @@ const CharacterListScreen: React.FC = () => {
   const [tableData, setTableData] = useState<string[][]>(); // Almacena los datos para la tabla
   const [selectedSpecies, setSelectedSpecies] = useState<string | null>(null); // Almacena la especie seleccionada
   const [speciesOptions, setSpeciesOptions] = useState<string[]>([]); // Almacena las opciones de especies
-
+  fetchAndInsertCharacters();
   // Efecto que se ejecuta al cargar el componente
   useEffect(() => {
     createTable(); // Crea la tabla en la base de datos si no existe
